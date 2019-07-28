@@ -1,6 +1,7 @@
-function redirect() {
-    redditPage = window.location.href.replace('www','old')
-    location.replace(redditPage);
+function redirect(link) {
+    location.replace(link);
 }
 
-redirect();
+let currentUrl = window.location.href;
+let redirectTarget = currentUrl.replace('www','old');
+redirect(redirectTarget);
