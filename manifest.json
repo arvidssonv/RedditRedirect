@@ -1,0 +1,19 @@
+{
+
+    "manifest_version": 2,
+    "name": "RedditRedirect",
+    "version": "1.0",
+    "description": "Redirects reddit.com links to the old layout",
+    "icons": {
+      "48": "icons/reddit.svg"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://www.reddit.com/*"],
+        "js": ["redirect.js"],
+        "run_at": "document_start"
+      }
+    ]
+
+  }
